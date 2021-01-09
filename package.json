@@ -5,5 +5,9 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.13"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bulma": "^0.9.1"
   }
 }
