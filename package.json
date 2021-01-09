@@ -1,3 +1,9 @@
 {
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start -c bs-config.json"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
 }
