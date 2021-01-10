@@ -1,6 +1,5 @@
-export const SubmissionContent = {
-  template: `
-    <div class="content">
+<template>
+  <div class="content">
       <p>
         <strong>
           <a :href="submission.url" class="has-text-info">{{ submission.title }}</a>
@@ -15,6 +14,23 @@ export const SubmissionContent = {
         </small>
       </p>
     </div>
-  `,
+</template>
+
+<style scoped>
+.tag {
+  font-size: 0.6rem !important;
+}
+
+.image.is-24x24 {
+  display: inline;
+  position: relative;
+  top: 5px;
+  border-radius: 20px;
+}
+</style>
+
+<script>
+export default {
   props: ['submission']
 }
+</script>
