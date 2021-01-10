@@ -8,5 +8,10 @@ new Vue({
     voteFor: function(submission) {
       ++submission.votes;
     }
+  },
+  computed: {
+    sortedSubmissions: function() {
+      return [...this.submissions].sort((s1,s2) => s2.votes - s1.votes);
+    }
   }
 });
