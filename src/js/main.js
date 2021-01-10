@@ -8,6 +8,11 @@ const UpvoteApp = {
     voteFor(submission) {
       ++submission.votes;
     }
+  },
+  computed: {
+    sortedSubmissions() {
+      return [...this.submissions].sort((s1,s2) => s2.votes - s1.votes);
+    }
   }
 }
 

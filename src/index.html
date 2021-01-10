@@ -12,7 +12,7 @@
     <h2 class="title has-text-centered dividing-header">UpVote!</h2>
 
     <div class="section">
-      <article v-for="s in submissions" v-bind:key="s.id" class="media">
+      <article v-for="s in sortedSubmissions" v-bind:key="s.id" class="media">
         <figure class="media-left">
           <img class="image is-64x64" v-bind:src="s.submissionImage">
         </figure>
