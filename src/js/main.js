@@ -62,7 +62,7 @@ Vue.component('submission-list', {
   }
 });
 
-const upvoteApp = Vue.component('upvote-app', {
+const UpvoteApp = {
   template: `
     <div>
       <h2 class="title has-text-centered dividing-header">UpVote!</h2>
@@ -72,8 +72,8 @@ const upvoteApp = Vue.component('upvote-app', {
   data: () => ({
     submissions: window.Seed.submissions
   })
-});
+};
 
 new Vue({
-  template: '<upvote-app></upvote-app>'
+  render: h => h(UpvoteApp)
 }).$mount('#app');
