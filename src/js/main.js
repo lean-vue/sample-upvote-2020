@@ -1,1 +1,4 @@
-console.log('Your starting point. Enjoy the ride!');
+const UpvoteApp = {
+}
+
+Vue.createApp(UpvoteApp).mount('#app');
