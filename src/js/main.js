@@ -3,6 +3,11 @@ const UpvoteApp = {
     return {
       submissions: window.Seed.submissions
     }
+  },
+  methods: {
+    voteFor(submission) {
+      ++submission.votes;
+    }
   }
 }
 
