@@ -3,5 +3,10 @@ new Vue({
   el: '#app',
   data: {
     submissions: window.Seed.submissions
+  },
+  methods: {
+    voteFor: function(submission) {
+      ++submission.votes;
+    }
   }
 });

@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="media-right">
-          <span class="icon is-small">
+          <span class="icon is-small" v-on:click="voteFor(s)">
             <i class="fa fa-chevron-up"></i>
             <strong class="has-text-info">{{ s.votes }}</strong>
           </span>
