@@ -1,4 +1,4 @@
-import { SubmissionVotes } from './SubmissionVotes.js';
+import SubmissionVotes from './SubmissionVotes.vue';
 import { SubmissionContent } from './SubmissionContent.js';
 
 export const SubmissionList = {

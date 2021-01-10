@@ -28,10 +28,6 @@
   font-size: 0.6rem !important;
 }
 
-.icon {
-  cursor: pointer;
-}
-
 .image.is-24x24 {
   display: inline;
   position: relative;
