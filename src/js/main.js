@@ -75,6 +75,5 @@ const upvoteApp = Vue.component('upvote-app', {
 });
 
 new Vue({
-  el: '#app',
   template: '<upvote-app></upvote-app>'
-});
+}).$mount('#app');
