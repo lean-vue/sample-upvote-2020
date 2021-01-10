@@ -1,4 +1,7 @@
 console.log('Your starting point. Enjoy the ride!');
 new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    submissions: window.Seed.submissions
+  }
 });
