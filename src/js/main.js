@@ -5,6 +5,37 @@ const UpvoteApp = {
   `
 };
 
+const SubmissionVotes = {
+  template: `
+    <span class="icon is-small" @click="$emit('vote')">
+          <i class="fa fa-chevron-up"></i>
+          <strong class="has-text-info">{{ submission.votes }}</strong>
+    </span>
+  `,
+  props: ['submission']
+};
+
+const SubmissionContent = {
+  template: `
+    <div class="content">
+      <p>
+        <strong>
+          <a :href="submission.url" class="has-text-info">{{ submission.title }}</a>
+          <span class="tag is-small">#{{ submission.id }}</span>
+        </strong>
+        <br>
+        {{ submission.description }}
+        <br>
+        <small class="is-size-7">
+          Submitted by:
+          <img class="image is-24x24" :src="submission.avatar">
+        </small>
+      </p>
+    </div>
+  `,
+  props: ['submission']
+};
+
 const app = Vue.createApp(UpvoteApp);
 
 app.component('submission-list', {
@@ -15,27 +46,10 @@ app.component('submission-list', {
         <img class="image is-64x64" :src="s.submissionImage">
       </figure>
       <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>
-              <a :href="s.url" class="has-text-info">{{ s.title }}</a>
-              <span class="tag is-small">#{{ s.id }}</span>
-            </strong>
-            <br>
-            {{ s.description }}
-            <br>
-            <small class="is-size-7">
-              Submitted by:
-              <img class="image is-24x24" :src="s.avatar">
-            </small>
-          </p>
-        </div>
+        <submission-content :submission="s"></submission-content>
       </div>
       <div class="media-right">
-        <span class="icon is-small" @click="voteFor(s)">
-          <i class="fa fa-chevron-up"></i>
-          <strong class="has-text-info">{{ s.votes }}</strong>
-        </span>
+        <submission-votes :submission="s" @vote="voteFor(s)"></submission-votes>
       </div>
     </article>
   </div>
@@ -54,6 +68,10 @@ app.component('submission-list', {
     sortedSubmissions() {
       return [...this.submissions].sort((s1, s2) => s2.votes - s1.votes);
     }
+  },
+  components: {
+    SubmissionContent,
+    SubmissionVotes
   }
 });
 
