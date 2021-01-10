@@ -17,6 +17,7 @@ import SubmissionList from './SubmissionList.vue';
 import { submissionsSeed } from '../seed.js';
 
 export default {
+  name: 'UpvoteApp',
   data: () => ({
     submissions: submissionsSeed
   }),
