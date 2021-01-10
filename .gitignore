@@ -1,2 +1,5 @@
+# Production build
+/dist/
+
 # NPM deps
 /node_modules/

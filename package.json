@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "start": "browser-sync start -c bs-config.json"
+    "start": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.13"
+    "vite": "^2.0.0-beta.19"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",

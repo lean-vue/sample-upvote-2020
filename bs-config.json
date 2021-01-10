@@ -1,6 +1,0 @@
-{
-  "server": {
-    "baseDir": ["./src", "./node_modules"]
-  },
-  "files": "./src"
-}

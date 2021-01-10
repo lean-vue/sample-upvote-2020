@@ -1,4 +1,5 @@
 import { SubmissionList } from './SubmissionList.js';
+import { submissionsSeed } from '../seed.js';
 
 export const UpvoteApp = {
   template: `
@@ -8,7 +9,7 @@ export const UpvoteApp = {
     </div>
   `,
   data: () => ({
-    submissions: window.Seed.submissions
+    submissions: submissionsSeed
   }),
   components: {
     SubmissionList
